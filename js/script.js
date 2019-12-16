@@ -4,7 +4,7 @@ const nameOfPage = document.querySelector('.nameOfPage'),
     girlsOnline = document.getElementsByClassName('online');
     
 window.onload = function() {
-    // nameOfPage.style.borderBottom = '2px solid #6866d1';
+    nameOfPage.style.borderBottom = '2px solid #6866d1';
     // localStorage.setItem('oneDay', 86400000);
     // localStorage.registered ? registered.innerHTML = localStorage.getItem('registered') : localStorage.setItem('registered', registered.innerHTML);
     // localStorage.happy ? happy.innerHTML = localStorage.getItem('happy') : localStorage.setItem('happy', happy.innerHTML);

@@ -40,6 +40,7 @@ header {
     letter-spacing: 0.5px;
     text-decoration: none;
     color: #0a0a0a;
+    border-bottom: 2px solid #ffffff;
 }
 .nameOfPage:hover {
     color: #6866d1;
@@ -269,7 +270,7 @@ header {
     font-family: 'Roboto-Bold';
     margin: 13px 20px;
     font-size: 16px;
-    color: rgb(18,18,18);
+    color: #121212;
 }
 .infographics {
     width: 100%;
@@ -407,6 +408,10 @@ li span {
 .fourth li:nth-child(2) {
     margin-top: 30px;
 }
+.fourth p:nth-child(2), .third p:first-child, .fifth p:nth-child(2),
+.sixth p:first-child, .seventh p:first-child {
+    line-height: 34px;
+}
 .fifth .firstWomen {
     margin-top: 35px;
 }
@@ -429,7 +434,6 @@ li span {
     margin: 20px 0 15px 0;
 }
 .conclusion p:nth-child(2) {
-    width: 90%;
     margin: 0 auto 20px auto;
     font-size: 16px;
     line-height: 24px;
@@ -464,9 +468,95 @@ li span {
     box-shadow: 0 0 6px #999999;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
 }
 footer {
     width: 100%;
     height: 145px;
     background: #6951a7;
+}
+.footerContent {
+    width: 1140px;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.description {
+    width: 255px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description p {
+    font-family: 'Roboto-Light';
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.description img {
+    width: 127px;
+    height: 44px;
+}
+.links {
+    width: 285px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.links a {
+    font-family: 'Roboto-Light';
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 34px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.links a:nth-child(3) {
+    margin: 0;
+}
+.links a:nth-child(4) {
+    margin-left: 80px;
+    margin-right: 0;
+}
+.links a:nth-child(5) {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.emailLogo {
+    width: 140px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.emailLogo span {
+    font-family: 'Roboto-Light';
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footerContent button {
+    width: 211px;
+    height: 42px;
+    background: #fe515d;
+    color: #ffffff;
+    font-family: 'Roboto-Bold';
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 6px #999999;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.footerContent button:hover {
+    opacity: 0.8;
 }
