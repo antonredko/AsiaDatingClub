@@ -34,8 +34,10 @@
         position: relative;
     }
     .firstWomen {
-        width: 290px;
-        height: 193px;
+        width: 90%;
+        height: 13em;
+        float: none;
+        margin: 0;
     }
     .first .firstWomen {
         position: absolute;
@@ -127,6 +129,9 @@
     }
     .third li:first-child, .third li:nth-child(2), .third li:nth-child(3), .third li:nth-child(4), .third li:nth-child(5) {
         margin-left: 10%;
+    }
+    .third .firstWomen, .fourth .firstWomen, .fifth .firstWomen, .sixth .firstWomen {
+        float: none;
     }
     .conclusion {
         margin-bottom: 40px;

@@ -10,7 +10,9 @@ const nameOfPage = document.querySelector('.nameOfPage'),
     line = document.querySelector('.line div'),
     menuIcon = document.getElementsByClassName('menuIcon')[0],
     navigation = document.getElementsByClassName("navigation")[0],
-    close = document.getElementsByClassName("closeMenu")[0];
+    close = document.getElementsByClassName("closeMenu")[0],
+    leftArrow = document.getElementById('Right_arrow'),
+    rightArrow = document.getElementById('Left_arrow');
 
 menuIcon.addEventListener("click", showMenu);
 close.addEventListener("click", closeMenu);
@@ -39,20 +41,36 @@ window.onload = function() {
         girlsOnline[i].children[0].innerHTML = Math.floor(Math.random() * Math.floor(9999));
     }
 
-    // setTimeout(function() {
-    //     firstSlide.style.display = 'none';
-    //     fourthSlide.style.display = 'block';
-    //     line.style.left = '24%';
-    //     setTimeout(function() {
-    //         secondSlide.style.display = 'none';
-    //         fifthSlide.style.display = 'block';
-    //         line.style.left = '44.5%';
-    //     }, 3000)
-    // }, 3000)
-    
-}
+    // if(window.screen.height <= 375) {
 
-// localStorage.clear();
+    // }
+console.log(window.screen.width);
+    setTimeout(function() {
+        firstSlide.style.display = 'none';
+        fourthSlide.style.display = 'block';
+        secondSlide.style.display = 'none';
+        fifthSlide.style.display = 'block';
+        line.style.left = '44.5%';
+
+        function showFirstSlides() {
+            firstSlide.style.display = 'block';
+            fourthSlide.style.display = 'none';
+            secondSlide.style.display = 'block';
+            fifthSlide.style.display = 'none';
+            line.style.left = '0';
+        }
+        function showLastSlides() {
+            firstSlide.style.display = 'none';
+            fourthSlide.style.display = 'block';
+            secondSlide.style.display = 'none';
+            fifthSlide.style.display = 'block';
+            line.style.left = '44.5%';
+        }
+
+        leftArrow.addEventListener("click", showFirstSlides);
+        rightArrow.addEventListener("click", showLastSlides);
+    }, 3000)
+}
 
 function showMenu() {
     navigation.style.display = 'block';
