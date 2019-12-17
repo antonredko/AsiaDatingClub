@@ -1,7 +1,19 @@
 const nameOfPage = document.querySelector('.nameOfPage'),
     registered = document.querySelector('.registered').getElementsByTagName('p')[0],
     happy = document.querySelector('.happy').getElementsByTagName('p')[0],
-    girlsOnline = document.getElementsByClassName('online');
+    girlsOnline = document.getElementsByClassName('online'),
+    firstSlide = document.querySelectorAll('.slide')[0],
+    secondSlide = document.querySelectorAll('.slide')[1],
+    thirdSlide = document.querySelectorAll('.slide')[2],
+    fourthSlide = document.querySelectorAll('.slide')[3],
+    fifthSlide = document.querySelectorAll('.slide')[4];
+    line = document.querySelector('.line div'),
+    menuIcon = document.getElementsByClassName('menuIcon')[0],
+    navigation = document.getElementsByClassName("navigation")[0],
+    close = document.getElementsByClassName("closeMenu")[0];
+
+menuIcon.addEventListener("click", showMenu);
+close.addEventListener("click", closeMenu);
     
 window.onload = function() {
     nameOfPage.style.borderBottom = '2px solid #6866d1';
@@ -26,6 +38,31 @@ window.onload = function() {
     for(i = 0; i < girlsOnline.length; i += 1) {
         girlsOnline[i].children[0].innerHTML = Math.floor(Math.random() * Math.floor(9999));
     }
+
+    // setTimeout(function() {
+    //     firstSlide.style.display = 'none';
+    //     fourthSlide.style.display = 'block';
+    //     line.style.left = '24%';
+    //     setTimeout(function() {
+    //         secondSlide.style.display = 'none';
+    //         fifthSlide.style.display = 'block';
+    //         line.style.left = '44.5%';
+    //     }, 3000)
+    // }, 3000)
+    
 }
 
 // localStorage.clear();
+
+function showMenu() {
+    navigation.style.display = 'block';
+    for(let i = 0; i < navigation.getElementsByTagName("a").length; i += 1) {
+        navigation.getElementsByTagName("a")[i].onclick = function() {
+            navigation.style.display = 'block';
+        }
+    }
+}
+
+function closeMenu() {
+    navigation.style.display = 'none';
+}
