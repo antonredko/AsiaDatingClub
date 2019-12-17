@@ -65,7 +65,7 @@ window.onload = function() {
 
         leftArrow.addEventListener("click", showFirstSlides);
         rightArrow.addEventListener("click", showLastSlides);
-    }, 3000)
+    }, 15000)
 }
 
 function showMenu() {
